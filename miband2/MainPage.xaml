@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+             x:Class="miband2.MainPage">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="0.1*" />
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="0" VerticalOptions="Fill" HorizontalOptions="Fill">
+            <Editor FontSize="Medium" BackgroundColor="White" TextColor="Black" x:Name="editor" Margin="10"
+                    VerticalOptions="Fill" HorizontalOptions="Fill" />
+        </ScrollView>
+        <Button Grid.Row="1" x:Name="clickButton" FontSize="Large" Text="Click" Clicked="click_Clicked"
+                VerticalOptions="Center" />
+    </Grid>
+</ContentPage>
