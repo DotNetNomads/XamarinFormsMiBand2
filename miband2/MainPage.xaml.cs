@@ -116,7 +116,10 @@ namespace miband2
 
         private void MeasurementCharacteristicOnValueUpdated(object sender, CharacteristicUpdatedEventArgs e)
         {
-            editor.Text += $"❤️: {e.Characteristic.Value[1]} \n";
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                editor.Text += $"❤️: {e.Characteristic.Value[1]} \n";
+            });
         }
 
         private async Task<string> ProcessDeviceInformationService(IService deviceInfoService)
